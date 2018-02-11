@@ -20,22 +20,26 @@ public class DontForgetTheLyrics {
 	
 	public static void main(String[] args) {
 		// 4. Make a pop-up to explain the game.
-
+JOptionPane.showMessageDialog(null, "In this game, the goal is to guess what song is playing.");
 		// 5. Use the playSound method to play your song.
-
+playSound("PPAP.wav");
 		// 6. Make a pop-up for the player to type their answer.
-
+String guess = JOptionPane.showInputDialog(null, "What is your guess?");
 		// 7. If they answered correctly, tell them that they were right.
-
+if (guess.equals("PPAP")) {
+	JOptionPane.showMessageDialog(null, "You got it right!");
+}
 		// 8. Otherwise, tell them they are wrong, and give them the answer.
-
+else {
+	JOptionPane.showMessageDialog(null, "Your wrong!");
+}
 		// 9. Record another sound and repeat steps 5-8.
 
 		// 10. [optional] Add a points variable that will calculate their final score.
 	}
 
-	public static void playSound(String fileName) {
-		AudioClip audioClip = JApplet.newAudioClip(new DontForgetTheLyrics().getClass().getResource(fileName));
+	public static void playSound(String PPAP) {
+		AudioClip audioClip = JApplet.newAudioClip(new DontForgetTheLyrics().getClass().getResource("PPAP.wav"));
 		audioClip.play();
 	}
 }
