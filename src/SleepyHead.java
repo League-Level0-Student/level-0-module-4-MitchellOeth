@@ -10,13 +10,17 @@ public class SleepyHead {
     public static void main(String[] args) {
         
         boolean isWeekday, isVacation;
+         
         
-        /*
-         * Ask the user for these values using
-         * JOptionPane.showConfirmDialog(null, "is it a weekday?", "",
-         * JOptionPane.YES_NO_OPTION);
-         */
-    
+   
+int day = JOptionPane.showConfirmDialog(null, "is it a weekday?");
+
+        if (day==0) {
+        System.out.println("get up lazybones!");
+        }
+        if (day==1) {
+            System.out.println("sleep in");
+            }
 
 
         /*
